@@ -19,16 +19,46 @@ body{
 }
 
 
-.navbar{
+/*.navbar{
     height: 5rem;
     padding: 0rem 16.5rem;
     background: transparent;
-    /*background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);*/
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}*/
+
+.cursor-follower {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transition:
+    width 0.2s ease,
+    height 0.2s ease,
+    background-color 0.2s ease,
+    opacity 0.2s ease,
+    transform 0.05s ease;
+  background-color: white; /* initial color */
+  opacity: 1;
 }
+.cursor-follower.active {
+  width: 50px;
+  height: 50px;
+  opacity: 0.5; 
+}
+/*.cursor-follower.active {
+  width: 50px;
+  height: 50px;
+  background-color: #64A7D5;
+}*/
+
 
 .navbar-nav .nav-item {
     margin-right: 1.88rem;
@@ -38,6 +68,37 @@ body{
     font-weight: 500;
     line-height: normal;
 }
+
+/* Glassmorphism Transparent Navbar */
+.navbar.transparent {
+    height: 5rem;
+    padding: 0rem 16.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    /*border-bottom: 1px solid rgba(255, 255, 255, 0.2);*/
+    transition: background-color 0.3s, color 0.3s;
+    border-bottom: none;
+}
+
+.navbar.transparent .nav-link,
+.navbar.transparent .order-button-nav {
+    color: #ffffff !important;
+}
+
+/* Solid white background navbar */
+.navbar.white-bg {
+    background-color: #ffffff !important;
+    transition: background-color 0.3s, color 0.3s;
+    border-bottom: 1px solid hsla(0, 0%, 67%, .25);;
+}
+
+.navbar.white-bg .nav-link,
+.navbar.white-bg {
+    color: #000000 !important;
+
+}
+
 
 .navbar-nav .nav-item:last-child {
   margin-right: 0; /* Remove margin after the last item */
@@ -53,6 +114,18 @@ body{
     flex-shrink: 0;
     aspect-ratio: 92.73/54.00;
 }
+.logo {
+  width: 5.79544rem;
+  height: 3.375rem;
+  flex-shrink: 0;
+  aspect-ratio: 92.73/54.00;
+}
+
+.logo-colored,
+.logo-white {
+  transition: opacity 0.3s ease;
+}
+
 
 .btn.order-button-nav{
     min-width: 7.4375rem;
@@ -668,7 +741,7 @@ footer{
   border-radius: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
-  transition: top 0.3s ease;
+  transition: top 1s ease;
   /*box-shadow: 0 0 10px rgba(47, 128, 237, 0.4);*/
 }
 
@@ -679,7 +752,7 @@ footer{
   left: 50%;
   height: 40px;
   width: 40px;
-  background: rgba(0, 123, 255, 0.2);
+  background: rgba(0, 123, 255, 0.8);
   border-radius: 50%;
   transform: translate(-50%, -50%);
   animation: pulseRing 1s infinite ease-out;
