@@ -18,6 +18,40 @@ body{
     background: #0A0A0A !important;
 }
 
+/**scroll top**/
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px; /* Use right or left as preferred */
+  width: 60px;
+  height: 60px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#myBtn:hover {
+  background-color: #0B6BFF;
+  color: #000;
+}
+
+#myBtn i {
+  font-size: 28px;
+  line-height: 1;
+  display: inline-block;
+  vertical-align: middle;
+  pointer-events: none; /* ensures icon doesn’t interfere with button click */
+}
+
 
 /*.navbar{
     height: 5rem;
@@ -51,7 +85,7 @@ body{
 .cursor-follower.active {
   width: 50px;
   height: 50px;
-  opacity: 0.5; 
+  opacity: 0.5;
 }
 /*.cursor-follower.active {
   width: 50px;
@@ -99,6 +133,12 @@ body{
 
 }
 
+.navbar.white-bg:hover .nav-link:hover,
+.navbar.white-bg:hover {
+    color: #0B6BFF !important;
+
+}
+
 
 .navbar-nav .nav-item:last-child {
   margin-right: 0; /* Remove margin after the last item */
@@ -107,6 +147,11 @@ body{
 .nav-link{
     color: #ffffff !important;
 }
+
+.nav-link:hover{
+    color: #0B6BFF !important;
+}
+
 
 .logo{
     width: 5.79544rem;
@@ -147,6 +192,8 @@ body{
     color: #FFF;
 }
 
+
+
 /**Hero Section**/
 
 .card.hero-card{
@@ -168,15 +215,29 @@ body{
     margin-left: 17rem;
 }
 
+@media (max-width: 432px){
+    .card.hero-head-card{
+    margin-left: 1rem;
+    margin-top: 0rem !important;
+}
+}
+
 .hero-card-title{
     color: #FFF;
-    font-size: 3.5rem;
+    font-size: clamp(2.25rem, -0.1157rem + 4.1322vw, 3.5rem);
+    /*font-size: 3.5rem;*/
     font-style: normal;
     font-weight: 400;
     line-height: 4.5rem;
     letter-spacing: -0.07rem;
     cursor: default;
     max-width: 37.25rem;
+}
+
+@media (max-width: 432px){
+    .hero-card-title{
+        line-height: 2.5rem;
+    }
 }
 
 .hero-card-subtitle{
@@ -307,10 +368,25 @@ body{
 
 @media (min-width: 768px) {
   .border-dashed-start {
-    border-left: 1px dashed #aaa; /* Customize thickness and color */
-    padding-left: 1rem; /* Space after the border */
+    border-left: 1px dashed #aaa;
+    padding-left: 1rem;
   }
 }
+
+@media (max-width: 432px) {
+    .card-body-1{
+        margin: 0 1.25rem 0 1.25rem !important;
+    }
+}
+
+@media (max-width: 432px) {
+    .why-row{
+        margin-bottom: 1rem !important;
+    }
+}
+
+
+
 
 .card.solution-card{
     border: none !important;
@@ -350,7 +426,7 @@ body{
 .card.solution-card-1{
     border-radius: 0.5rem;
     border: none !important;
-    background: none;
+    background: transparent !important;
 
 }
 
@@ -450,6 +526,8 @@ body{
     line-height: normal;
     letter-spacing: -0.02rem;
     text-decoration: none;
+    background: transparent;
+    border: none;
 }
 .learn-more:hover{
     color: #FFF;
@@ -573,6 +651,23 @@ body{
   color: rgba(0, 0, 0, 0.6);
   font-weight: 400;
 }
+
+.transition-expand {
+    transition: max-height 10.5s ease-in-out, opacity 0.5s ease-in-out;
+    overflow: hidden;
+}
+
+.faq-wrapper {
+    overflow: hidden;
+    transition: max-height 0.6s ease-in-out, padding 0.3s ease-in-out;
+    max-height: 1000px;
+}
+
+/* Expanded state will have more room */
+.faq-wrapper.expanded {
+    max-height: 5000px;
+}
+
 
 .card.newsletter-card{
     padding: 5rem 0;
@@ -703,6 +798,7 @@ footer{
     font-style: normal;
     font-weight: 400;
     line-height: 140%; /* 1.4rem */
+    text-decoration: none;
 }
 
 .footer-contact {
@@ -711,6 +807,9 @@ footer{
     flex-shrink: 0;
 }
 
+.social-links{
+    text-decoration: none;
+}
 /**timeline**/
 
 .process-wrapper {
