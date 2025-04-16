@@ -20,7 +20,7 @@ def graphic():
     return render_template("graphics.html")
 
 @app.route("/other")
-def presentation():
+def other():
     return render_template("other.html")
 
 @app.route("/solutions")
