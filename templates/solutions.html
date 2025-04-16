@@ -1,5 +1,4 @@
 {% extends 'base.html' %}
-{% load static %}
 
 {% block title %}Solutions - VGDS{% endblock %}
 
@@ -11,10 +10,10 @@
           <div class="container">
             <a class="navbar-brand" href="/">
                 <!-- White logo (default) -->
-                <img src="{% static 'images/vgds-white-logo.png' %}" alt="Bootstrap" class="logo logo-white" id="navbarLogo">
+                <img src="static/images/vgds-white-logo.png" alt="Bootstrap" class="logo logo-white" id="navbarLogo">
 
                 <!-- Colored logo (hidden initially) -->
-                <img src="{% static 'images/vgds-logo-2.png' %}" class="logo logo-colored d-none" alt="Logo">
+                <img src="static/images/vgds-logo-2.png" class="logo logo-colored d-none" alt="Logo">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -25,10 +24,10 @@
                   <a class="nav-link" aria-current="page" href="#">Our Work</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link active" href="{% url 'projectapp:services' %}">Services</a>
+                  <a class="nav-link active" href="/services">Services</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Solutions</a>
+                  <a class="nav-link" href="/solutions">Solutions</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#">Testimonials</a>
@@ -92,7 +91,7 @@
                     high-quality results that make a powerful impact.</p>
                 </div>
                 <div class="col-md-6 col-bg-image">
-                  <div class="bg-image-box-1" style=" background-image: url('{% static 'images/2148908911.jpg' %}');"></div>
+                  <div class="bg-image-box-1" style=" background-image: url('static/images/2148908911.jpg');"></div>
                 </div>
               </div>
             </div>
@@ -106,7 +105,7 @@
               <div class="row row-cols-1 row-cols-md-3 g-4">
                 <div class="col">
                   <div class="card bg-transparent border-0" style="">
-                    <img src="{% static 'icons/icons8-service-48.png' %}" class="service-icon m-2" alt="...">
+                    <img src="static/icons/icons8-service-48.png" class="service-icon m-2" alt="...">
                     <div class="card-body">
                       <h1 class="key-service-title mb-1">Service 1</h1>
                       <p class="key-service-subtitle text-muted mb-0">Professional Web
@@ -117,7 +116,7 @@
                 </div>
                 <div class="col">
                   <div class="card bg-transparent border-0" style="">
-                    <img src="{% static 'icons/icons8-service-48.png' %}" class="service-icon m-2" alt="...">
+                    <img src="static/icons/icons8-service-48.png" class="service-icon m-2" alt="...">
                     <div class="card-body">
                       <h1 class="key-service-title mb-1">Service 1</h1>
                       <p class="key-service-subtitle text-muted mb-0">Professional Web
@@ -128,7 +127,7 @@
                 </div>
                 <div class="col">
                   <div class="card bg-transparent border-0" style="">
-                    <img src="{% static 'icons/icons8-service-48.png' %}" class="service-icon m-2" alt="...">
+                    <img src="static/icons/icons8-service-48.png" class="service-icon m-2" alt="...">
                     <div class="card-body">
                       <h1 class="key-service-title mb-1">Service 1</h1>
                       <p class="key-service-subtitle text-muted mb-0">Professional Web
