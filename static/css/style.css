@@ -314,6 +314,7 @@ body{
 }
 .btn.order-button:hover{
     background: #0B6BFF;
+    color: #ffffff;
 }
 
 .btn.enquiry-button{
@@ -323,6 +324,7 @@ body{
 .btn.enquiry-button:hover{
     border: 2px solid #FFF;
     background: none;
+    color: #ffffff;
 }
 
 
@@ -783,7 +785,7 @@ cursor: default;
 
 .btn.launch-button{
     border-radius: 0.5rem;
-    border: 1px solid #FFF ;
+    border: 1px solid #FFF;
     display: flex;
     min-width: 7.4375rem;
     padding: 0.875rem 1.5rem;
@@ -791,6 +793,10 @@ cursor: default;
     align-items: center;
     gap: 0.625rem;
     color: #FFF;
+}
+.btn.launch-button:hover{
+    color: #FFF;
+    border: 1px solid #FFF;
 }
 
 .btn.pricing-link{
@@ -801,6 +807,9 @@ cursor: default;
     align-items: center;
     gap: 0.625rem;
     border-radius: 0 !important;
+    color: #FFF;
+}
+.btn.pricing-link:hover{
     color: #FFF;
 }
 .btn.pricing-link:hover{
