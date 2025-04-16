@@ -15,6 +15,14 @@ def services():
 def presentation():
     return render_template("presentation-design.html")
 
+@app.route("/graphic-print-design")
+def graphic():
+    return render_template("graphics.html")
+
+@app.route("/other")
+def presentation():
+    return render_template("other.html")
+
 @app.route("/solutions")
 def solutions():
     return render_template("solutions.html")
