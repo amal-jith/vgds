@@ -1,0 +1,141 @@
+{% extends 'base.html' %}
+
+{% block title %}Solutions - VGDS{% endblock %}
+
+      {% block content %}
+
+      <!--Other Navbar  -->
+
+        <nav class="navbar navbar-expand-lg fixed-top navbar-secondary">
+          <div class="container">
+            <a class="navbar-brand" href="/">
+                <!-- White logo (default) -->
+                <img src="static/images/vgds-white-logo.png" alt="Bootstrap" class="logo logo-white" id="navbarLogo">
+
+                <!-- Colored logo (hidden initially) -->
+                <img src="static/images/vgds-logo-2.png" class="logo logo-colored d-none" alt="Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarText">
+              <ul class="navbar-nav mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="#">Our Work</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="/services">Services</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/solutions">Solutions</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Testimonials</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Pricing</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">About Us</a>
+                </li>
+              </ul>
+
+                <!-- Mobile Order Now button -->
+              <div class="d-lg-none mt-3">
+                <button type="button" class="btn order-button-nav">Order Now</button>
+              </div>
+
+            </div>
+
+            <!-- Order Now Button -->
+            <div class="d-none d-lg-block">
+              <button type="button" class="btn order-button-nav">Order Now</button>
+            </div>
+
+          </div>
+        </nav>
+
+        <!--END NAVBAR-->
+
+       <div class="white-section">
+
+          <div class="card sub-service-hero">
+            <div class="container p-0">
+              <h1 class="sub-service-hero-title">Graphics & Print Design</h1>
+              <h1 class="sub-service-hero-subtitle">Visually Stunning. Strategically Impactful.</h1>
+              <p class="sub-service-hero-desc">Stand out from the competition with stunning graphics and print designs. Our creative solutions are crafted to amplify your brand’s voice, ensuring your message resonates across all digital and print platforms.
+</p>
+            </div>
+          </div>
+
+          <div class="card service-section">
+            <div class="container p-0">
+
+              <div class="row row-cols-1 row-cols-md-2 g-4">
+                  <div class="col-md-7">
+                    <div class="card card-1" style="">
+                      <div class="card-body">
+                        <h2 class="service-card-title">Presentation Design</h2>
+                        <p class="service-card-subtitle">Chroma goes beyond providing IT services—we build partnerships that drive value and success.
+                          Here’s why businesses choose us:</p>
+                        <div class="row row-cols-1 row-cols-md-2 g-4">
+                          <div class="col">
+                            <div class="service-box d-flex align-items-start gap-3">
+                              <img src="{% static 'icons/icons8-design-48.png' %}" style="height: 24px; width: 24px;">
+                              <div>
+                                <h6 class="service-box-title mb-1">Business Presentations</h6>
+                                <p class="service-box-subtitle mb-0">
+                                  We take the time to understand your goals and challenges, delivering solutions tailored to your needs.
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col">
+                            <div class="service-box d-flex align-items-start gap-3">
+                              <img src="{% static 'icons/icons8-design-48.png' %}" style="height: 24px; width: 24px;">
+                              <div>
+                                <h6 class="service-box-title mb-1">Business Presentations</h6>
+                                <p class="service-box-subtitle mb-0">
+                                  We take the time to understand your goals and challenges, delivering solutions tailored to your needs.
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col">
+                            <div class="service-box d-flex align-items-start gap-3">
+                              <img src="{% static 'icons/icons8-design-48.png' %}" style="height: 24px; width: 24px;">
+                              <div>
+                                <h6 class="service-box-title mb-1">Business Presentations</h6>
+                                <p class="service-box-subtitle mb-0">
+                                  We take the time to understand your goals and challenges, delivering solutions tailored to your needs.
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col">
+                            <div class="service-box d-flex align-items-start gap-3">
+                              <img src="{% static 'icons/icons8-design-48.png' %}" style="height: 24px; width: 24px;">
+                              <div>
+                                <h6 class="service-box-title mb-1">Business Presentations</h6>
+                                <p class="service-box-subtitle mb-0">
+                                  We take the time to understand your goals and challenges, delivering solutions tailored to your needs.
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <a type="button" class="btn explore-btn" href="{% url 'projectapp:presentation_design' %}">Explore Service</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-5 col-bg-image">
+                    <div class="bg-image-box-2" style=" background-image: url('static/images/2149300711.jpg');"></div>
+                  </div>
+                </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      {% endblock %}
