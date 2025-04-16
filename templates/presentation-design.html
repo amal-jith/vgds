@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Solutions - VGDS{% endblock %}
+
+      {% block content %}
+
+      <!--Other Navbar  -->
+
+        <nav class="navbar navbar-expand-lg fixed-top navbar-secondary">
+          <div class="container">
+            <a class="navbar-brand" href="/">
+                <!-- White logo (default) -->
+                <img src="{% static 'images/vgds-white-logo.png' %}" alt="Bootstrap" class="logo logo-white" id="navbarLogo">
+
+                <!-- Colored logo (hidden initially) -->
+                <img src="{% static 'images/vgds-logo-2.png' %}" class="logo logo-colored d-none" alt="Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarText">
+              <ul class="navbar-nav mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="#">Our Work</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="{% url 'projectapp:services' %}">Services</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Solutions</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Testimonials</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Pricing</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">About Us</a>
+                </li>
+              </ul>
+
+                <!-- Mobile Order Now button -->
+              <div class="d-lg-none mt-3">
+                <button type="button" class="btn order-button-nav">Order Now</button>
+              </div>
+
+            </div>
+
+            <!-- Order Now Button -->
+            <div class="d-none d-lg-block">
+              <button type="button" class="btn order-button-nav">Order Now</button>
+            </div>
+
+          </div>
+        </nav>
+
+        <!--END NAVBAR-->
+
+        <div class="card sub-service-hero">
+          <div class="container p-0">
+            <h1 class="sub-service-hero-title">Presentation Design</h1>
+            <h1 class="sub-service-hero-subtitle">Persuasive Slides. Powerful Impact.</h1>
+            <p class="sub-service-hero-desc">Transform your ideas into powerful presentations that captivate and persuade.
+              Our designs are tailored to your brand identity, ensuring a polished, cohesive, and memorable impact.</p>
+          </div>
+        </div>
+
+      {% endblock %}
