@@ -1009,6 +1009,7 @@ footer{
 .card.about-hero{
     border: none;
     border-radius: 0px;
+    cursor: default;
 }
 
 .about-hero-title{
@@ -1066,6 +1067,7 @@ footer{
     font-weight: 600;
     line-height: normal;
     margin-bottom: 1.25rem;
+    cursor: default;
 }
 .service-card-subtitle{
     color: rgba(0, 0, 0, 0.60);
@@ -1074,6 +1076,8 @@ footer{
     font-style: normal;
     font-weight: 400;
     line-height: 1.375rem; /* 137.5% */
+    margin-bottom: 3.5rem;
+    cursor: default;
 }
 
 .icon-square {
@@ -1083,8 +1087,151 @@ footer{
   margin-top: 4px; /* Align better with heading */
 }
 
-.presentation-box {
-  background-color: #eaf6ff; /* Light blue background */
-  padding: 1rem;
+.service-box {
+  background-color: transparent;
+  cursor: default;
+}
+
+.service-box-title{
+    color: var(--Primary-Black, #151515);
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.service-box-subtitle{
+    color: rgba(0, 0, 0, 0.60);
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+}
+
+.btn.explore-btn{
+    border: 1px solid #000;
+    padding: 0.875rem 2.125rem 0.875rem 1.4375rem;
+    align-items: center;
+    margin-top: 3.69rem;
+    border-radius: 0;
+}
+.btn.explore-btn:hover{
+    border: 1px solid #000;
+}
+.bg-image-box {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 36.375rem;
   border-radius: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .bg-image-box {
+    height: 15rem;
+  }
+}
+
+.col-bg-image{
+    padding: 2rem !important;
+}
+
+.card.service-section-2{
+    background: #FFFFFF;
+    border: none;
+    border-radius: 0;
+    padding: 5rem 0;
+}
+.card.solution-hero-card{
+    background: #ffffff;
+    border: 0;
+    border-radius: 0;
+    padding: 6rem 0 14rem ;
+}
+.solution-hero-card-title{
+    color: var(--Primary-Black, #151515);
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+.bg-image-box-1 {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 26.5rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+.solution-hero-subtitle{
+    color: rgba(0, 0, 0, 0.60);
+    font-size: 1rem;
+    font-style: italic;
+    font-weight: 300;
+    line-height: 1.375rem; /* 137.5% */
+    margin-bottom: 1.25rem;
+}
+.solution-hero-subtitle-1{
+    color: rgba(0, 0, 0, 0.60);
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.375rem; /* 137.5% */
+}
+
+.card.key-features-card{
+    background: #E1E1E1;
+    padding: 6.69rem 0;
+    border: 0;
+    border-radius: 0;
+}
+
+.key-title{
+    color: #000;
+    text-align: center;
+    font-size: 3.125rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 5.1rem;
+}
+
+.service-icon {
+  width: 60px;
+  height: 60px;
+}
+
+.card.sub-service-hero{
+    background: #010101;
+    padding: 13rem 0 8.1rem 0;
+    border: 0;
+    border-radius: 0;
+}
+
+.sub-service-hero-title{
+    color: #FFF;
+    font-size: 3.75rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 3.75rem; /* 100% */
+    margin-bottom: 1.25rem;
+}
+
+.sub-service-hero-subtitle{
+    color: #FFF;
+    font-size: 1.5rem;
+    font-style: italic;
+    font-weight: 300;
+    line-height: normal;
+    margin-bottom: 1.25rem;
+}
+.sub-service-hero-desc{
+    color: #FFF;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    max-width: 44.00306rem;
 }
