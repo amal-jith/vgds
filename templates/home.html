@@ -4,6 +4,59 @@
 
       {% block content %}
 
+              <!--Home Navbar  -->
+
+        <nav class="navbar navbar-expand-lg fixed-top transparent">
+          <div class="container">
+            <a class="navbar-brand" href="/">
+                <!-- White logo (default) -->
+                <img src="static/images/vgds-white-logo.png" alt="Bootstrap" class="logo logo-white" id="navbarLogo">
+
+                <!-- Colored logo (hidden initially) -->
+                <img src="static/images/vgds-logo-2.png/" class="logo logo-colored d-none" alt="Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarText">
+              <ul class="navbar-nav mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">Our Work</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Services</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Solutions</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Testimonials</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Pricing</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">About Us</a>
+                </li>
+              </ul>
+
+                <!-- Mobile Order Now button -->
+              <div class="d-lg-none mt-3">
+                <button type="button" class="btn order-button-nav">Order Now</button>
+              </div>
+
+            </div>
+
+            <!-- Order Now Button -->
+            <div class="d-none d-lg-block">
+              <button type="button" class="btn order-button-nav">Order Now</button>
+            </div>
+
+          </div>
+        </nav>
+
+        <!--END NAVBAR-->
+
       <div class="header">
             <div class="card text-bg-dark hero-card d-flex justify-content-center align-items-center">
               <div class="card-img-overlay ">
@@ -34,28 +87,27 @@
                                 <div class="swiper mySwiper mx-0">
                                   <div class="swiper-wrapper">
                                     <div class="swiper-slide"><img src="static/images/dum.jpg" alt=""></div>
-                                    <div class="swiper-slide"><img src="static/images/dum.jpg" alt=""></div>
-                                    <div class="swiper-slide"><img src="static/images/dum.jpg" alt=""></div>
-                                      <div class="swiper-slide"><img src="static/images/dum.jpg" alt=""></div>
-                                      <div class="swiper-slide"><img src="static/images/dum.jpg" alt=""></div>
-                                    <div class="swiper-slide"><img src="static/images/dum.jpg" alt=""></div>
-                                    <div class="swiper-slide"><img src="static/images/dum.jpg" alt=""></div>
-                                      <div class="swiper-slide"><img src="static/images/dum.jpg" alt=""></div>
+                                    <div class="swiper-slide"><img src="static/images/image2.jpg" alt=""></div>
+                                    <div class="swiper-slide"><img src="static/images/image3.jpg" alt=""></div>
+                                      <div class="swiper-slide"><img src="static/images/image4.jpg" alt=""></div>
+                                      <div class="swiper-slide"><img src="static/images/image5.jpg" alt=""></div>
+                                    <div class="swiper-slide"><img src="static/images/image6.jpg" alt=""></div>
+                                    <div class="swiper-slide"><img src="static/images/image4.jpg" alt=""></div>
+                                      <div class="swiper-slide"><img src="static/images/image2.jpg" alt=""></div>
                                   </div>
                                 </div>
                             </div>
                             <div class="col-6 d-flex flex-column align-items-end">
                                 <div class="swiper mySwiper2 mx-0">
                                   <div class="swiper-wrapper">
-                                    <div class="swiper-slide"><img src="static/images/dum.jpg" alt=""></div>
-                                    <div class="swiper-slide"><img src="static/images/dum.jpg" alt=""></div>
-                                    <div class="swiper-slide"><img src="static/images/dum.jpg" alt=""></div>
-                                      <div class="swiper-slide"><img src="static/images/dum.jpg" alt=""></div>
-
-                                      <div class="swiper-slide"><img src="static/images/dum.jpg" alt=""></div>
-                                    <div class="swiper-slide"><img src="static/images/dum.jpg" alt=""></div>
-                                    <div class="swiper-slide"><img src="static/images/dum.jpg" alt=""></div>
-                                      <div class="swiper-slide"><img src="static/images/dum.jpg" alt=""></div>
+                                    <div class="swiper-slide"><img src="static/images/image3.jpg" alt=""></div>
+                                    <div class="swiper-slide"><img src="static/images/image5.jpg" alt=""></div>
+                                    <div class="swiper-slide"><img src="static/images/image6.jpg" alt=""></div>
+                                      <div class="swiper-slide"><img src="static/images/image2.jpg" alt=""></div>
+                                      <div class="swiper-slide"><img src="static/images/image3.jpg" alt=""></div>
+                                    <div class="swiper-slide"><img src="static/images/image4.jpg" alt=""></div>
+                                    <div class="swiper-slide"><img src="static/images/image5.jpg" alt=""></div>
+                                      <div class="swiper-slide"><img src="static/images/image6.jpg" alt=""></div>
                                   </div>
                                 </div>
                             </div>
@@ -385,12 +437,12 @@
         </div>
 
 
-        <div class="section-3">
-            <div class="card solution-card">
+        <div class="white-section" id="faq-section">
+            <div class="card why-card">
                 <div class="container p-0">
                     <div class="card-body p-0 card-body-1">
                         <div class="row g-2">
-                            <div class="col-md-6"><h5 class="faq-title">Frequently Asked Questions</h5></div>
+                            <div class="col-md-6"><h5 class="faq-title">Frequently<br> Asked Questions</h5></div>
 
                             <div class="col-md-6">
 
@@ -462,9 +514,9 @@
                                 </div>
 
                                 <div class="text-center">
-                                    <a class="learn-more d-inline-flex align-items-center" href="#">
+                                    <a class="learn-more-1 d-inline-flex align-items-center" href="#">
                                     Load More
-                                  <img src="static/icons/down.svg" alt="Arrow" class="ms-2" width="20" height="20">
+                                  <img src="static/icons/down.svg" alt="Arrow" class="ms-2 invert-arrow" width="20" height="20">
                                 </a>
                                 </div>
 
