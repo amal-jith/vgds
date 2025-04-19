@@ -983,6 +983,21 @@ footer{
   border-radius: 50%;
   z-index: 1;
 }
+/* Text styles for active step */
+.timeline-step.active .process-head-1,
+.timeline-step.active .process-head-2 {
+  transform: scale(1.05);
+  opacity: 1;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Default (non-active) state */
+.process-head-1,
+.process-head-2 {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0.8;
+  transform: scale(0.95);
+}
 
 .process-head-1{
     max-width: 25rem;
@@ -1235,3 +1250,71 @@ footer{
     line-height: normal;
     max-width: 44.00306rem;
 }
+
+.bg-image-box-2 {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 40rem;
+  border-radius: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .bg-image-box {
+    height: 15rem;
+  }
+}
+
+.accordion-item-why {
+  border-bottom: 1px solid #ddd;
+  padding: 1rem 0;
+}
+
+.accordion-button-why {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  width: 100%;
+  text-align: left;
+  position: relative;
+  color: rgba(0, 0, 0, 0.50);
+    font-size: 1.75rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%; /* 2.275rem */
+    padding: 1.5rem 0;
+}
+
+.accordion-button-why::after {
+  display: none;
+}
+
+.accordion-button-why:not(.collapsed) {
+  font-weight: 700;
+  color: #161616;
+  transition: color 0.3s ease;
+}
+
+.accordion-button-why:not(.collapsed)::before {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 60px;
+  height: 2px;
+  transition: width 0.3s ease;
+
+}
+
+.accordion-body-why {
+  margin-top: 0.5rem;
+  color: #161616;
+font-family: "DM Sans";
+font-size: 1rem;
+font-style: normal;
+font-weight: 400;
+line-height: 140%; /* 1.4rem */
+}
+
+
