@@ -5,6 +5,11 @@ document.addEventListener('DOMContentLoaded', function () {
   const logoWhite = document.querySelector('.logo-white');
   const logoColored = document.querySelector('.logo-colored');
 
+  // Skip script if navbar-secondary is applied
+  if (navbar.classList.contains('navbar-secondary')) {
+    return;
+  }
+
   function updateNavbar() {
     const scrolledPastThreshold = window.scrollY > 100;
     const isDesktop = window.innerWidth >= 992;
@@ -22,7 +27,6 @@ document.addEventListener('DOMContentLoaded', function () {
         logoColored.classList.add('d-none');
       }
     } else {
-      // On mobile: always solid white navbar
       navbar.classList.remove('transparent');
       navbar.classList.add('white-bg');
       logoWhite.classList.add('d-none');
@@ -30,12 +34,11 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
-  // Update navbar on scroll and on window resize
   window.addEventListener('scroll', updateNavbar);
   window.addEventListener('resize', updateNavbar);
-
-  updateNavbar(); // Initial check on page load
+  updateNavbar(); // Initial call
 });
+
 
 
 
@@ -222,8 +225,11 @@ function updateBubblePosition() {
   let minDist = Infinity;
 
   steps.forEach((step) => {
-    const rect = step.getBoundingClientRect(); // position relative to viewport
+    const rect = step.getBoundingClientRect();
     const dist = Math.abs(rect.top + rect.height / 2 - window.innerHeight / 2);
+
+    // Remove active class from all steps
+    step.classList.remove("active");
 
     if (dist < minDist) {
       minDist = dist;
@@ -231,19 +237,53 @@ function updateBubblePosition() {
     }
   });
 
-  // Now calculate its position relative to the wrapper's top
+  // Add active class to closest step
+  activeStep.classList.add("active");
+
+  // Move the bubble
   const wrapper = document.querySelector(".process-wrapper");
   const wrapperTop = wrapper.getBoundingClientRect().top + window.scrollY;
   const stepTop = activeStep.getBoundingClientRect().top + window.scrollY;
 
   const relativeTop = stepTop + activeStep.offsetHeight / 2 - wrapperTop;
-
   bubble.style.top = `${relativeTop}px`;
 }
 
-// Attach to scroll and load events
 window.addEventListener("scroll", updateBubblePosition);
 window.addEventListener("load", updateBubblePosition);
+
+
+//without text scaling up///
+//const steps = document.querySelectorAll("[data-step]");
+//const bubble = document.getElementById("bubble");
+//
+//function updateBubblePosition() {
+//  let activeStep = steps[0];
+//  let minDist = Infinity;
+//
+//  steps.forEach((step) => {
+//    const rect = step.getBoundingClientRect(); // position relative to viewport
+//    const dist = Math.abs(rect.top + rect.height / 2 - window.innerHeight / 2);
+//
+//    if (dist < minDist) {
+//      minDist = dist;
+//      activeStep = step;
+//    }
+//  });
+//
+//  // Now calculate its position relative to the wrapper's top
+//  const wrapper = document.querySelector(".process-wrapper");
+//  const wrapperTop = wrapper.getBoundingClientRect().top + window.scrollY;
+//  const stepTop = activeStep.getBoundingClientRect().top + window.scrollY;
+//
+//  const relativeTop = stepTop + activeStep.offsetHeight / 2 - wrapperTop;
+//
+//  bubble.style.top = `${relativeTop}px`;
+//}
+//
+//// Attach to scroll and load events
+//window.addEventListener("scroll", updateBubblePosition);
+//window.addEventListener("load", updateBubblePosition);
 
 
 //FAQ//
@@ -329,3 +369,5 @@ function scrollFunction() {
 function topFunction() {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
+
+
