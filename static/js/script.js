@@ -4,11 +4,10 @@ document.addEventListener('DOMContentLoaded', function () {
   const navbar = document.querySelector('.navbar');
   const logoWhite = document.querySelector('.logo-white');
   const logoColored = document.querySelector('.logo-colored');
+  const dropdown = document.querySelector('.custom-dropdown');
 
   // Skip script if navbar-secondary is applied
-  if (navbar.classList.contains('navbar-secondary')) {
-    return;
-  }
+  if (navbar.classList.contains('navbar-secondary')) return;
 
   function updateNavbar() {
     const scrolledPastThreshold = window.scrollY > 100;
@@ -20,17 +19,23 @@ document.addEventListener('DOMContentLoaded', function () {
         navbar.classList.add('white-bg');
         logoWhite.classList.add('d-none');
         logoColored.classList.remove('d-none');
+
+        dropdown?.classList.add('scrolled-dropdown');
       } else {
         navbar.classList.add('transparent');
         navbar.classList.remove('white-bg');
         logoWhite.classList.remove('d-none');
         logoColored.classList.add('d-none');
+
+        dropdown?.classList.remove('scrolled-dropdown');
       }
     } else {
       navbar.classList.remove('transparent');
       navbar.classList.add('white-bg');
       logoWhite.classList.add('d-none');
       logoColored.classList.remove('d-none');
+
+      dropdown?.classList.add('scrolled-dropdown');
     }
   }
 
@@ -38,7 +43,6 @@ document.addEventListener('DOMContentLoaded', function () {
   window.addEventListener('resize', updateNavbar);
   updateNavbar(); // Initial call
 });
-
 
 
 
@@ -370,4 +374,43 @@ function topFunction() {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
+//In about section highlighting VGDS expansion
+document.addEventListener("DOMContentLoaded", function () {
+const targetText = document.getElementById("highlightedText");
 
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        targetText.classList.add("active");
+      } else {
+        targetText.classList.remove("active");
+      }
+    });
+  },
+  {
+    threshold: 0.6 // Element should be at least 60% visible
+  }
+);
+
+if (targetText) observer.observe(targetText);
+});
+
+//In Why Us, on collapse, border bottom, becomes blue
+document.addEventListener("DOMContentLoaded", function () {
+const accordions = document.querySelectorAll(".accordion-item-why");
+
+accordions.forEach(item => {
+  const button = item.querySelector(".accordion-button-why");
+
+  button.addEventListener("click", function () {
+    // Remove active from all
+    accordions.forEach(acc => acc.classList.remove("active"));
+
+    // Add to the clicked one if not collapsed
+    if (button.classList.contains("collapsed") === false) {
+      item.classList.add("active");
+    }
+  });
+});
+});
