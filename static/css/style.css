@@ -112,7 +112,7 @@ body{
 /* Glassmorphism Transparent Navbar */
 .navbar.transparent {
     height: 5rem;
-    padding: 0rem 16.5rem;
+    /*padding: 0rem 16.5rem;*/
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
@@ -229,6 +229,131 @@ body{
 }
 
 
+/* Mega Dropdown Styles */
+.custom-dropdown .dropdown-menu {
+    width: 36rem;
+    left: -200px;
+    border: 1px solid rgba(255, 255, 255, 0.20);
+    background: rgba(255, 255, 255, 0.10);
+    backdrop-filter: blur(13.396551132202148px);
+    border-radius: 0.51725rem;
+    padding: 1.29313rem;
+    margin-top: 2rem;
+}
+.custom-dropdown .dropdown-menu {
+position: relative;
+  z-index: 1030; /* Match or exceed navbar z-index */
+}
+
+.dropdown-card {
+  display: block;
+  text-align: center;
+  color: #fff;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 0.75rem;
+  overflow: hidden;
+}
+
+.dropdown-card img {
+  width: 100%;
+  border-radius: 0.25863rem;
+  max-height: 6.4655rem;
+  object-fit: cover;
+}
+
+.dropdown-title {
+    margin-top: 1.03rem;
+    margin-bottom: 0 !important;
+    color: #FFF;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.dropdown-card:hover {
+  color: #0B6BFF !important;
+}
+.custom-dropdown .nav-link.dropdown-toggle::after {
+  display: none;
+}
+
+.custom-dropdown .dropdown-menu[data-bs-popper] {
+  margin-top: 2rem !important;
+  left: -2.5rem;
+}
+
+/**when scrolled**/
+/* When navbar has scrolled and dropdown has white background */
+.custom-dropdown.scrolled-dropdown .dropdown-menu {
+  background: white;
+  backdrop-filter: none;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  color: black;
+}
+
+/* Also update dropdown text styles if needed */
+.custom-dropdown.scrolled-dropdown .dropdown-title {
+  color: #000;
+}
+
+.custom-dropdown.scrolled-dropdown .dropdown-card:hover {
+  color: #0B6BFF !important;
+}
+
+.custom-dropdown .mega-dropdown-bg {
+    width: 36rem;
+    left: -200px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255);
+    border-radius: 0.51725rem;
+    padding: 1.29313rem;
+    margin-top: 2rem;
+}
+.custom-dropdown .mega-dropdown-bg {
+  z-index: 1030; /* Match or exceed navbar z-index */
+}
+
+.dropdown-title-bg {
+    margin-top: 1.03rem;
+    margin-bottom: 0 !important;
+    color: #000;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.custom-dropdown .dropdown-menu {
+  position: relative;
+}
+.custom-dropdown .dropdown-menu::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: 10%;
+    transform: translateX(-50%);
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent rgba(255, 255, 255, 0.3) transparent;
+    z-index: 1000;
+}
+/* When scrolled: fully white arrow */
+.navbar-scrolled .custom-dropdown .dropdown-menu::before {
+    border-color: transparent transparent white transparent;
+}
+
+
+/*.navbar .dropdown-menu::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 10px solid transparent;
+  border-bottom-color: rgba(255, 255, 255, 0.3);
+}*/
 
 /**Hero Section**/
 
@@ -379,6 +504,7 @@ body{
 .card.trust-card-in{
     border: none !important;
     border-radius: 0 !important;
+
 }
 
 .trust-title-1{
@@ -555,6 +681,34 @@ body{
     letter-spacing: 0.0025rem;
     cursor: default;
 }
+.highlight-on-scroll {
+  position: relative;
+  color: black;
+  z-index: 1;
+}
+
+.highlight-on-scroll::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 100%;
+  background-color: #0B6BFF;
+  z-index: -1;
+  transition: width 1s ease;
+}
+
+.highlight-on-scroll.active {
+  color: white;
+  padding-left: 10px;
+}
+
+.highlight-on-scroll.active::before {
+  width: 100%;
+}
+
+
 
 .learn-more{
     color: #ffffff;
@@ -601,7 +755,8 @@ body{
 .card.why-card{
     border: none !important;
     border-radius: 0 !important;
-    background: #F3F3F3;
+    /*background: #F3F3F3;*/
+    background: #FFFFFF;
     padding: 7.5rem 0;
 }
 .why-title{
@@ -656,6 +811,13 @@ body{
     letter-spacing: -0.07rem;
     cursor: default;
     margin-bottom: 5.25rem;
+}
+
+.card.faq-card{
+    border: none !important;
+    border-radius: 0 !important;
+    background: #E2F2FF;
+    padding: 7.5rem 0;
 }
 .faq-title{
     color: #161616;
@@ -1268,22 +1430,42 @@ footer{
 
 .accordion-item-why {
   border-bottom: 1px solid #ddd;
-  padding: 1rem 0;
+  padding: 2rem 0;
+  position: relative;
+}
+.accordion-item-why::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background: linear-gradient(to right, #007bff 60%, #ddd 60%);
+  transition: width 0.4s ease;
+  z-index: 1;
 }
 
-.accordion-button-why {
-  background: transparent;
-  border: none;
-  box-shadow: none;
+/* When active (open), expand the underline */
+.accordion-button-why:not(.collapsed) + .accordion-body-why,
+.accordion-button-why.active + .accordion-body-why {
+  border-bottom: none;
+}
+
+.accordion-item-why.active::after {
   width: 100%;
-  text-align: left;
-  position: relative;
-  color: rgba(0, 0, 0, 0.50);
+}
+.accordion-button-why {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    width: 100%;
+    text-align: left;
+    position: relative;
+    color: rgba(0, 0, 0, 0.50);
     font-size: 1.75rem;
     font-style: normal;
     font-weight: 400;
     line-height: 130%; /* 2.275rem */
-    padding: 1.5rem 0;
 }
 
 .accordion-button-why::after {
@@ -1291,7 +1473,7 @@ footer{
 }
 
 .accordion-button-why:not(.collapsed) {
-  font-weight: 700;
+  font-weight: 500;
   color: #161616;
   transition: color 0.3s ease;
 }
@@ -1304,17 +1486,15 @@ footer{
   width: 60px;
   height: 2px;
   transition: width 0.3s ease;
-
 }
 
 .accordion-body-why {
-  margin-top: 0.5rem;
-  color: #161616;
-font-family: "DM Sans";
-font-size: 1rem;
-font-style: normal;
-font-weight: 400;
-line-height: 140%; /* 1.4rem */
+    margin-top: 1.5rem;
+    color: #161616;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%; /* 1.4rem */
 }
 
 
