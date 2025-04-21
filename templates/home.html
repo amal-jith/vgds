@@ -25,6 +25,28 @@
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="/services">Services</a>
+                      <div class="dropdown-menu mega-dropdown">
+                        <div class="row">
+                          <div class="col-md-4">
+                            <a href="/services" class="dropdown-card">
+                              <img src="static/images/sol1.jpg" class="img-fluid" alt="Presentation Design">
+                              <p class="dropdown-title">Presentation Design</p>
+                            </a>
+                          </div>
+                          <div class="col-md-4">
+                            <a href="#" class="dropdown-card">
+                              <img src="static/images/sol1.jpg" class="img-fluid" alt="Graphics & Print Design">
+                              <p class="dropdown-title">Graphics & Print Design</p>
+                            </a>
+                          </div>
+                          <div class="col-md-4">
+                            <a href="#" class="dropdown-card">
+                              <img src="static/images/sol1.jpg" class="img-fluid" alt="Other Services">
+                              <p class="dropdown-title">Other Services</p>
+                            </a>
+                          </div>
+                        </div>
+                    </div>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="/solutions">Solutions</a>
@@ -221,16 +243,16 @@
                         <div class="row row-cols-1 row-cols-md-2 g-4">
                             <div class="col">
                                 <div class="card about-1-card" style="max-width: 36.25rem;">
-                                    <div class="card-body p-0">
+<!--                                     <div class="card-body p-0">
                                     <p class="about-1-title">About VGDS Global: Where Design Meets Impact</p>
-                                    </div>
+                                    </div> -->
                                   <div class="bg-cover-about-1" style="background-image: url('static/images/vgds1.jpg');"></div>
                                 </div>
                             </div>
                             <div class="col d-flex align-items-center justify-content-center">
                                 <div class="card about-1-card" style="max-width: 40rem;">
                                     <div class="card-body p-0">
-                                        <h5 class="about-2-title">At Visual Graphics Design Services, we don’t just create presentations—we craft
+                                        <h5 class="about-2-title">At<span class="highlight-on-scroll" id="highlightedText">  Visual Graphics Design Services  </span>, we don’t just create presentations—we craft
                                             visual stories that inform, inspire, and persuade.
                                         </h5>
                                         <p class="about-3-title">With over 15 years of experience designing for top firms like McKinsey & Co., BCG, EY and Deloitte,
@@ -447,76 +469,8 @@
             </div>
         </div> -->
 
-        <div class="white-section">
-            <div class="card trust-card">
-                <div class="container p-0">
-                    <div class="card-body p-0">
-                        <h5 class="process-title text-center">Our Process</h5>
-
-                        <div class="process-wrapper">
-                              <div class="timeline-line"></div>
-                              <div class="timeline-indicator" id="bubble"></div>
-
-                              <!-- STEP 1 -->
-                              <div class="timeline-step" data-step>
-                                <div class="left-step">
-                                  <h5 class="process-head-1">Content Submission</h5>
-                                  <p class="process-head-2">Send us your draft in any format – PPT, Word, or even email. We take it from there.</p>
-                                </div>
-                                  <div class="timeline-dot"></div>
-                                <div class="right-step"></div>
-                              </div>
-
-                              <!-- STEP 2 -->
-                              <div class="timeline-step" data-step>
-                                <div class="left-step"></div>
-                                  <div class="timeline-dot"></div>
-                                <div class="right-step">
-                                  <h5 class="process-head-1">Pricing & Timeline</h5>
-                                  <p class="process-head-2">Our project manager connects with you to finalize pricing and set clear timelines.</p>
-                                </div>
-                              </div>
-
-                              <!-- STEP 3 -->
-                              <div class="timeline-step" data-step>
-                                <div class="left-step">
-                                  <h5 class="process-head-1">Sample Slides</h5>
-                                  <p class="process-head-2">We create engaging sample slides for your review and feedback.</p>
-                                </div>
-                                  <div class="timeline-dot"></div>
-                                <div class="right-step"></div>
-                              </div>
-
-                              <!-- STEP 4 -->
-                              <div class="timeline-step" data-step>
-                                <div class="left-step"></div>
-                                  <div class="timeline-dot"></div>
-                                <div class="right-step">
-                                  <h5 class="process-head-1">Revisions & Feedback</h5>
-                                  <p class="process-head-2">We refine the slides based on your feedback, ensuring everything meets your expectations.</p>
-                                </div>
-                              </div>
-
-                              <!-- STEP 3 -->
-                              <div class="timeline-step" data-step>
-                                <div class="left-step">
-                                  <h5 class="process-head-1">Final Delivery</h5>
-                                  <p class="process-head-2">After thorough checks and final edits, we deliver a polished presentation that makes an impact.</p>
-                                </div>
-                                  <div class="timeline-dot"></div>
-                                <div class="right-step"></div>
-                              </div>
-
-                            </div>
-                          
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="white-section" id="faq-section">
-            <div class="card why-card">
+              <div class="white-section" id="faq-section">
+            <div class="card faq-card">
                 <div class="container p-0">
                     <div class="card-body p-0 card-body-1">
                         <div class="row g-2">
@@ -605,6 +559,76 @@
                 </div>
             </div>
         </div>
+
+        <div class="white-section">
+            <div class="card trust-card">
+                <div class="container p-0">
+                    <div class="card-body p-0">
+                        <h5 class="process-title text-center">Our Process</h5>
+
+                        <div class="process-wrapper">
+                              <div class="timeline-line"></div>
+                              <div class="timeline-indicator" id="bubble"></div>
+
+                              <!-- STEP 1 -->
+                              <div class="timeline-step" data-step>
+                                <div class="left-step">
+                                  <h5 class="process-head-1">Content Submission</h5>
+                                  <p class="process-head-2">Send us your draft in any format – PPT, Word, or even email. We take it from there.</p>
+                                </div>
+                                  <div class="timeline-dot"></div>
+                                <div class="right-step"></div>
+                              </div>
+
+                              <!-- STEP 2 -->
+                              <div class="timeline-step" data-step>
+                                <div class="left-step"></div>
+                                  <div class="timeline-dot"></div>
+                                <div class="right-step">
+                                  <h5 class="process-head-1">Pricing & Timeline</h5>
+                                  <p class="process-head-2">Our project manager connects with you to finalize pricing and set clear timelines.</p>
+                                </div>
+                              </div>
+
+                              <!-- STEP 3 -->
+                              <div class="timeline-step" data-step>
+                                <div class="left-step">
+                                  <h5 class="process-head-1">Sample Slides</h5>
+                                  <p class="process-head-2">We create engaging sample slides for your review and feedback.</p>
+                                </div>
+                                  <div class="timeline-dot"></div>
+                                <div class="right-step"></div>
+                              </div>
+
+                              <!-- STEP 4 -->
+                              <div class="timeline-step" data-step>
+                                <div class="left-step"></div>
+                                  <div class="timeline-dot"></div>
+                                <div class="right-step">
+                                  <h5 class="process-head-1">Revisions & Feedback</h5>
+                                  <p class="process-head-2">We refine the slides based on your feedback, ensuring everything meets your expectations.</p>
+                                </div>
+                              </div>
+
+                              <!-- STEP 3 -->
+                              <div class="timeline-step" data-step>
+                                <div class="left-step">
+                                  <h5 class="process-head-1">Final Delivery</h5>
+                                  <p class="process-head-2">After thorough checks and final edits, we deliver a polished presentation that makes an impact.</p>
+                                </div>
+                                  <div class="timeline-dot"></div>
+                                <div class="right-step"></div>
+                              </div>
+
+                            </div>
+                          
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
 
 
         <div class="white-section">
