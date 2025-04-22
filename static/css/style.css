@@ -1243,26 +1243,36 @@ footer{
     font-style: normal;
     font-weight: 600;
     line-height: normal;
-    margin-bottom: 1.25rem;
+    margin-bottom: 1.5rem;
     cursor: default;
 }
 .service-card-subtitle{
     color: rgba(0, 0, 0, 0.60);
-    font-family: "DM Sans";
     font-size: 1rem;
     font-style: normal;
     font-weight: 400;
     line-height: 1.375rem; /* 137.5% */
-    margin-bottom: 3.5rem;
+    margin-bottom: 1.5rem;
+    cursor: default;
+}
+.service-card-subtitle-italics{
+    color: rgba(0, 0, 0, 0.60);
+    font-size: 1rem;
+    font-style: italic;
+    font-weight: 300;
+    line-height: 1.375rem; /* 137.5% */
+    margin-bottom: 1.5rem;
     cursor: default;
 }
 
 .icon-square {
-  width: 16px;
-  height: 16px;
+  width: 1.5rem;
+  height: 1..5rem;
   background-color: #1d72b8; /* Adjust color to match your brand */
   margin-top: 4px; /* Align better with heading */
 }
+
+
 
 .service-box {
   background-color: transparent;
@@ -1380,11 +1390,31 @@ footer{
   height: 60px;
 }
 
-.card.sub-service-hero{
-    background: #010101;
-    padding: 13rem 0 8.1rem 0;
-    border: 0;
-    border-radius: 0;
+.card.sub-service-hero {
+  background-color: #010630;
+  padding: 13rem 0 8.1rem 0;
+  border: 0;
+  border-radius: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-ellipse {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+    max-width: 81.625rem;
+    height: 37.375rem;
+  padding-left: 19rem;
+  padding-right: 19rem;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.sub-service-hero .container {
+  position: relative;
+  z-index: 1;
 }
 
 .sub-service-hero-title{
@@ -1394,6 +1424,7 @@ footer{
     font-weight: 600;
     line-height: 3.75rem; /* 100% */
     margin-bottom: 1.25rem;
+    cursor: default;
 }
 
 .sub-service-hero-subtitle{
@@ -1403,6 +1434,7 @@ footer{
     font-weight: 300;
     line-height: normal;
     margin-bottom: 1.25rem;
+    cursor: default;
 }
 .sub-service-hero-desc{
     color: #FFF;
@@ -1411,6 +1443,7 @@ footer{
     font-weight: 400;
     line-height: normal;
     max-width: 44.00306rem;
+    cursor: default;
 }
 
 .bg-image-box-2 {
@@ -1419,7 +1452,7 @@ footer{
   background-repeat: no-repeat;
   width: 100%;
   height: 40rem;
-  border-radius: 0.5rem;
+  border-radius: 1.5rem;
 }
 
 @media (max-width: 768px) {
@@ -1438,7 +1471,7 @@ footer{
   position: absolute;
   bottom: 0;
   left: 0;
-  height: 2px;
+  height: 1px;
   width: 0;
   background: linear-gradient(to right, #007bff 60%, #ddd 60%);
   transition: width 0.4s ease;
@@ -1497,4 +1530,40 @@ footer{
     line-height: 140%; /* 1.4rem */
 }
 
+.card.service-card-white{
+    background: #FFF;
+    border-radius: 0;
+    border: none;
+    padding: 7.5rem 0;
+}
 
+.bg-cover-about-2{
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      border-radius: 1.5rem;
+      max-width: 42.875rem;
+      height: 24.25rem;
+      margin-bottom: 1.25rem;
+}
+
+.card-body .card-body-2{
+    max-width: 32.1875rem;
+}
+
+.card.faq-card-other{
+    border: none !important;
+    border-radius: 0 !important;
+    background: #F3F3F3;
+    padding: 7.5rem 0;
+}
+
+.bg-cover-about-3{
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      border-radius: 1.5rem;
+      max-width: 32rem;
+      height: 36.375rem;
+      margin-bottom: 1.25rem;
+}
