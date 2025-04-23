@@ -414,3 +414,25 @@ accordions.forEach(item => {
   });
 });
 });
+
+
+
+////WHY US SECTION TAB CHANGES///
+ const lottieMap = {
+    'flush-collapseOne': 'https://lottie.host/ecc5057f-d7f7-4469-a206-9a15ef2f5d1b/mtuqjS5ncv.lottie', // Save Time
+    'flush-collapseTwo': 'https://lottie.host/c3ad558a-4186-4fdf-ba4d-09e9282a03c8/d4PRhG6t7S.lottie', // Professional Design
+    'flush-collapseThree': 'https://lottie.host/fa739fe8-9141-460e-91b1-a4b9deb9c567/IQVScqgfDy.lottie', // Confidentiality
+    'flush-collapseFour': 'https://lottie.host/4796b6f7-772e-40f9-8359-8eca55adf9ba/7iIKv0YPmZ.lottie', // Cost Efficiency
+    'flush-collapseFive': 'https://lottie.host/1867c80c-d466-4275-a239-aeac3a304613/rVwe6OIRjV.lottie'  // Fast Delivery
+  };
+
+  const accordion = document.getElementById('accordionFlushExample');
+  const lottiePlayer = document.getElementById('whyLottie');
+
+  accordion.addEventListener('shown.bs.collapse', function (event) {
+    const targetId = event.target.id;
+    const newSrc = lottieMap[targetId];
+    if (newSrc) {
+      lottiePlayer.load(newSrc);
+    }
+  });
