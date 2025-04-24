@@ -436,3 +436,44 @@ accordions.forEach(item => {
       lottiePlayer.load(newSrc);
     }
   });
+
+
+  ///Modal confirmation closing//
+
+  let targetWizardModal = null;
+
+  document.addEventListener('DOMContentLoaded', () => {
+    // Attach custom close handler to all wizard modals
+    document.querySelectorAll('.wizard-modal').forEach(modal => {
+      const closeBtn = modal.querySelector('.btn-close');
+
+      if (closeBtn) {
+        closeBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          e.stopPropagation(); // prevent Bootstrap's default close behavior
+
+          targetWizardModal = bootstrap.Modal.getInstance(modal);
+          const confirmModal = new bootstrap.Modal(document.getElementById('confirmCloseModal'));
+          confirmModal.show();
+        });
+      }
+    });
+
+    // "No, Let me Order" - just hide confirm modal
+    document.getElementById('cancelCloseWizard').addEventListener('click', () => {
+      const confirmModal = bootstrap.Modal.getInstance(document.getElementById('confirmCloseModal'));
+      confirmModal.hide();
+    });
+
+    // "Yes, Close" - hide confirm and then wizard modal
+    document.getElementById('confirmCloseWizard').addEventListener('click', () => {
+      const confirmModal = bootstrap.Modal.getInstance(document.getElementById('confirmCloseModal'));
+      confirmModal.hide();
+
+      if (targetWizardModal) {
+        targetWizardModal.hide();
+        targetWizardModal = null;
+      }
+    });
+  });
+
