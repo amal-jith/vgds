@@ -27,6 +27,10 @@ def other():
 def solutions():
     return render_template("solutions.html")
 
+@app.route("/orderNow")
+def orderNow():
+    return render_template("order-modal.html")
+
 
 
 app.run(host='0.0.0.0', port=443)
