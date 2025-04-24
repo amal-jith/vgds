@@ -416,7 +416,6 @@ accordions.forEach(item => {
 });
 
 
-
 ////WHY US SECTION TAB CHANGES///
  const lottieMap = {
     'flush-collapseOne': 'https://lottie.host/ecc5057f-d7f7-4469-a206-9a15ef2f5d1b/mtuqjS5ncv.lottie', // Save Time
