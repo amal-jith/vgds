@@ -1567,3 +1567,700 @@ footer{
       height: 36.375rem;
       margin-bottom: 1.25rem;
 }
+
+/**ORDER NOW**/
+
+.card.order-main-card{
+    padding: 7.5rem 0;
+    border: none;
+    background: #FFFFFF;
+    border-radius: 0;
+}
+
+
+
+.custom-modal-width {
+  max-width: 100% !important;
+  width: 120rem !important;
+
+}
+
+.modal-header{
+    margin-bottom: 5rem;
+}
+
+.modal-content{
+    background: #FAFAFA !important;
+}
+
+.modal-title{
+    color: #161616;
+    font-size: 2.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 3.5rem; /* 140% */
+    letter-spacing: -0.05rem;
+    cursor: default;
+}
+.modal-body{
+    margin-bottom: 5rem;
+}
+
+/**STEPPER**/
+.stepper {
+  position: relative;
+}
+
+.step {
+  position: relative;
+  padding-left: 1rem;
+  margin-bottom: 40px;
+}
+
+.step:last-child {
+  margin-bottom: 0; /* removes extra space below last step */
+}
+
+.step::before {
+  content: '';
+  position: absolute;
+  top: 15px;
+  left: 10px;
+  height: calc(100% + 25px); /* height of the line */
+  width: 2px;
+  background-color: #e0e0e0;
+  z-index: 0;
+}
+
+.step:last-child::before {
+  display: none; /* remove the line after the last circle */
+}
+
+.circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background-color: #FAFAFA;
+  border: 1px solid #bdbdbd;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  font-size: 14px;
+  cursor: default;
+}
+
+.step-content {
+  margin-left: 2rem;
+}
+
+.step.active .circle {
+  border-color: #0d6efd;
+  color: #0d6efd;
+  background: white;
+}
+
+.step-title{
+    color: #333;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 1.5rem */
+    letter-spacing: 0.0015rem;
+    cursor: default;
+}
+.step-desc{
+    color: #888;
+    max-width: 10rem;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.00219rem;
+    cursor: default;
+}
+
+.treat-title{
+    color: #161616;
+    leading-trim: both;
+    text-edge: cap;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.75rem; /* 140% */
+    letter-spacing: 0.00313rem;
+    cursor: default;
+}
+
+.card.treatment-card{
+    max-width: 26.25rem;
+    padding: 1.25rem;
+    border-radius: 0.5rem;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.10);
+    transition: border 0.3s ease-in-out;
+}
+.card.treatment-card:hover{
+    border: 1px solid #0B6BFF;
+}
+
+.card.treatment-card.active{
+    border: 1px solid #0B6BFF;
+}
+
+.card-icon img {
+  width: 3.25rem;
+  height: 3.25rem;
+  margin-bottom: 1rem;
+}
+
+.treat-title-1{
+    color: #161616;
+    leading-trim: both;
+    text-edge: cap;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.75rem; /* 175% */
+    letter-spacing: 0.0025rem;
+    margin-bottom: 0.75rem;
+    cursor: default;
+}
+.treat-title-2{
+    color: rgba(22, 22, 22, 0.80);
+    leading-trim: both;
+    text-edge: cap;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5rem; /* 150% */
+    letter-spacing: 0.0025rem;
+    margin-bottom: 1rem;
+    cursor: default;
+}
+
+.treat-title-3{
+    color: rgba(22, 22, 22, 0.60);
+    leading-trim: both;
+    text-edge: cap;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5rem; /* 150% */
+    letter-spacing: 0.0025rem;
+    margin-bottom: 0;
+    cursor: default;
+}
+.treat-price{
+    color: #003057;
+    leading-trim: both;
+    text-edge: cap;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 3.10169rem; /* 206.78% */
+    letter-spacing: 0.015rem;
+}
+
+.price-info {
+
+}
+
+.price-range {
+    color: #3EBF8A;
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 5.78044rem; /* 192.681% */
+    letter-spacing: 0.03rem;
+    cursor: default;
+}
+
+.price-info .text-muted {
+    color: #161616;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0.00281rem;
+    cursor: default;
+}
+
+.price-info a {
+    color: #0B6BFF;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0.0025rem;
+}
+
+.btn.previous-btn-disabled{
+    display: flex;
+    min-width: 9.05438rem;
+    padding: 1.06519rem 1.82606rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0.76088rem;
+    border-radius: 0.60869rem;
+    border: 1px solid #B3B3B3;
+    background: #D9D9D9;
+}
+
+.btn.next-btn{
+    display: flex;
+    max-width: 9.375rem;
+    min-width: 9.20444rem;
+    padding: 1.08288rem 1.85638rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0.7735rem;
+    border-radius: 0.61881rem;
+    background: #0B6BFF;
+    color: #ffffff;
+}
+.btn.next-btn:hover{
+    background: #0B6BFF;
+    color: #ffffff;
+}
+
+.card.style-card{
+    border-radius: 0.5rem;
+    border: 1px solid #C7C7C7;
+    background: #FFF;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.10);
+    padding: 1.25rem;
+    transition: border 0.3s ease-in-out;
+}
+.card.style-card:hover{
+    border: 1px solid #0B6BFF;
+}
+.card.style-card.active{
+    border: 1px solid #0B6BFF;
+}
+
+.card.upload-card{
+    border-radius: 0.75rem;
+    border-style: dashed;
+    border-width: 1px;
+    border-color: #B1B1B1;
+    background: #F3F3F3;
+    border-spacing: 5px;
+}
+
+.upload-icon{
+    background-color: white;
+    border-radius: 50%;
+    width: 3.125rem;
+    height: 3.125rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.upload-title{
+    color: #161616;
+    text-align: center;
+    leading-trim: both;
+    text-edge: cap;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.75rem; /* 175% */
+    letter-spacing: 0.0025rem;
+}
+
+.type-card-bg {
+  height: 10rem;
+  background-size: cover;
+  background-position: center;
+  border-radius: 0.25rem;
+  background-size: cover;
+  background-position: center;
+}
+
+.btn.previous-btn{
+    border-radius: 0.60869rem;
+    border: 2.435px solid #0B6BFF;
+    display: flex;
+    min-width: 9.05438rem;
+    padding: 1.06519rem 1.82606rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0.76088rem;
+}
+.btn.previous-btn:hover{
+    border: 2.435px solid #0B6BFF;
+}
+
+.card.delivery-card{
+    border: 0;
+    background: transparent;
+    border-radius: 0;
+}
+
+.number-input {
+  display: inline-flex;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 0.5rem;
+    border: 1px solid #C7C7C7;
+    background: #FFF;
+    width: 10rem;
+    height: 3rem;
+    padding: 0.75rem 0.5rem;
+    justify-content: space-between;
+    margin-top: 2.5rem;
+}
+
+
+
+.number-input button {
+  background: none;
+  border: none;
+  font-size: 1.2em;
+  padding: 0.5em 0.7em;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.number-input input[type="text"] {
+  width: 3rem;
+  text-align: center;
+  border: none;
+  padding: 0.5em;
+  font-size: 1em;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.number-input button:hover {
+  background-color: #f0f0f0;
+}
+
+.number-input button:active {
+  background-color: #e0e0e0;
+}
+
+/* Remove the default arrows for number input if you decide to use <input type="number"> */
+/*
+.number-input input[type="number"]::-webkit-outer-spin-button,
+.number-input input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.number-input input[type="number"] {
+  -moz-appearance: textfield; /* For Firefox */
+
+.delivery-title{
+    color: #161616;
+    leading-trim: both;
+    text-edge: cap;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.75rem; /* 140% */
+    letter-spacing: 0.00313rem;
+    cursor: default;
+}
+
+.delivery-desc{
+    color: rgba(22, 22, 22, 0.80);
+    leading-trim: both;
+    text-edge: cap;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5rem; /* 150% */
+    letter-spacing: 0.0025rem;
+    cursor: default;
+    max-width: 63.625rem;
+    margin-bottom: 2.5rem;
+}
+
+.delivery-desc-1{
+    color: #0B6BFF;
+    cursor: default;
+
+}
+
+.card.date-card{
+    display: flex;
+    width: 16.875rem;
+    padding: 1.25rem 0rem;
+    align-items: center;
+    gap: 2rem;
+    border-radius: 0.5rem;
+    border: 1px solid #C7C7C7;
+    background: #FFF;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.10);
+    transition: border 0.3s ease-in-out;
+}
+.card.date-card:hover{
+    display: flex;
+    width: 16.875rem;
+    padding: 1.25rem 0rem;
+    align-items: center;
+    gap: 2rem;
+    border-radius: 0.5rem;
+    border: 1px solid #0B6BFF;
+    background: #FFF;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.10);
+}
+
+.card.date-card.active{
+    display: flex;
+    width: 16.875rem;
+    padding: 1.25rem 0rem;
+    align-items: center;
+    gap: 2rem;
+    border-radius: 0.5rem;
+    border: 1px solid #0B6BFF;
+    background: #FFF;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.10);
+}
+
+.date-title{
+    color: #161616;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.75rem; /* 87.5% */
+    letter-spacing: 0.005rem;
+    margin-bottom: 1.5rem;
+}
+.date-subtitle{
+    color: rgba(22, 22, 22, 0.80);
+    text-align: center;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5rem; /* 150% */
+    letter-spacing: 0.0025rem;
+}
+
+.row-gap-2-5 {
+  gap: 2.5rem;
+}
+
+.card.delivery-card-1{
+    display: flex;
+    padding: 1.25rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+    border-radius: 0.5rem;
+    border: 1px solid #C7C7C7;
+    background: #FFF;
+    max-width: 22rem;
+    transition: border 0.3s ease-in-out;
+}
+.card.delivery-card-1:hover{
+   border: 1px solid #0B6BFF;
+}
+
+.delivery-title-1{
+    color: #161616;
+    leading-trim: both;
+    text-edge: cap;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.75rem; /* 175% */
+    letter-spacing: 0.0025rem;
+    margin-bottom: 1.25rem;
+}
+
+.delivery-title-2{
+    color: rgba(22, 22, 22, 0.80);
+    leading-trim: both;
+    text-edge: cap;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5rem; /* 150% */
+    letter-spacing: 0.0025rem;
+    margin-bottom: 1.5rem;
+}
+
+.delivery-title-3{
+    color: rgba(22, 22, 22, 0.60);
+    leading-trim: both;
+    text-edge: cap;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5rem; /* 150% */
+    letter-spacing: 0.0025rem;
+}
+
+.delivery-title-4{
+    color: #003057;
+    leading-trim: both;
+    text-edge: cap;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 3.10169rem; /* 206.78% */
+    letter-spacing: 0.015rem;
+}
+
+.card.upload-card-1{
+    width: 15.625rem;
+    height: 12.75rem;
+    border-radius: 0.75rem;
+    border-style: dashed;
+    border-width: 1px;
+    border-color: #B1B1B1;
+    background: #F3F3F3;
+    border-spacing: 5px;
+    margin-top: 2.5rem;
+}
+
+.type-links{
+    display: flex;
+    max-width: 45rem !important;
+    padding: 1.25rem;
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 0.5rem !important;
+    border: 1px solid #C7C7C7 !important;
+    background: #FFF;
+}
+
+.row.personal-row{
+    max-width: 47rem;
+}
+
+.payment-field{
+    display: flex !important;
+    max-width: 22.5rem !important;
+    padding: 1.25rem !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    border-radius: 0.5rem !important;
+    border: 1px solid #C7C7C7 !important;
+    background: #FFF !important;
+}
+
+.personal-pay{
+    margin-top: 2.5rem;
+}
+
+.promo-code-div{
+    margin-top: 3.5rem;
+    margin-bottom: 3.5rem;
+    max-width: 45rem;
+}
+
+
+
+.payment-check{
+    color: rgba(22, 22, 22, 0.80);
+    leading-trim: both;
+    text-edge: cap;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5rem; /* 150% */
+    letter-spacing: 0.0025rem;
+}
+
+.terms-text{
+    color: #0B6BFF;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5rem;
+    letter-spacing: 0.0025rem;
+}
+
+.promo-item{
+    border: 1px solid #C7C7C7 !important;
+    background: #FAFAFA !important;
+}
+
+.accordion-button.promo-button{
+    color: #161616 !important;
+    leading-trim: both;
+    text-edge: cap;
+    font-size: 1rem !important;
+    font-style: normal !important;
+    font-weight: 500 !important;
+    line-height: 1.75rem !important; /* 175% */
+    letter-spacing: 0.0025rem !important;
+}
+
+/* Restore Bootstrap default for .promo-button */
+.promo-button::after {
+  content: "" !important;
+  background-image: var(--bs-accordion-btn-icon) !important; /* default arrow */
+  transform: rotate(0deg) !important; /* reset any rotation */
+}
+
+.promo-button:not(.collapsed)::after {
+  background-image: var(--bs-accordion-btn-active-icon) !important;
+  transform: rotate(180deg) !important;
+}
+
+.btn.submit-my-btn{
+    display: flex;
+    min-width: 9.20444rem;
+    padding: 1.08288rem 1.85638rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0.7735rem;
+    border-radius: 0.61881rem;
+    background: #0B6BFF;
+    color: #ffffff;
+}
+.btn.submit-my-btn:hover{
+    background: #0B6BFF;
+    color: #ffffff;
+}
+
+.modal-content.success-modal{
+    border-radius: 1.25rem;
+}
+.card.success-card{
+    border-radius: 1.25rem;
+    background: #FFFFFF !important;
+    display: flex;
+    max-width: 35rem;
+    padding: 5.25rem 4.125rem 5.1875rem 4.125rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.success-img{
+    width: 12.5rem !important;
+    height: 12.5rem !important;
+    aspect-ratio: 1/1 !important;
+
+}
+
+.success-title{
+    color: #161616;
+    text-align: center;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 2.5rem; /* 125% */
+    letter-spacing: -0.04rem;
+    margin-top: 4.31rem;
+}
+
+.success-sub{
+    color: rgba(22, 22, 22, 0.60);
+    text-align: center;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2rem; /* 133.333% */
+    letter-spacing: -0.03rem;
+}
