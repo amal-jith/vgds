@@ -382,6 +382,12 @@ position: relative;
     margin-top: 0rem !important;
 }
 }
+.card.hero-head-card-1{
+    background: transparent;
+    max-width: 45.5rem;
+    border: none;
+}
+
 
 .hero-card-title{
     color: #FFF;
@@ -414,7 +420,7 @@ position: relative;
 .button-group {
     display: flex;
     gap: 1rem;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     margin-top: 1rem;
 }
 
@@ -460,7 +466,7 @@ position: relative;
 
 .swiper {
   max-height: 100vh;
-  width: 23.8rem;
+  max-width: 23.8rem;
 }
 .swiper-slide {
   display: flex;
@@ -481,6 +487,7 @@ position: relative;
   width: 23.8rem;
   border-radius: 0.75rem;
 }*/
+
 
 .card.trust-card{
     border: none !important;
@@ -1391,12 +1398,14 @@ footer{
 }
 
 .card.sub-service-hero {
-  background-color: #010630;
-  padding: 13rem 0 8.1rem 0;
-  border: 0;
-  border-radius: 0;
-  position: relative;
-  overflow: hidden;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 8rem 0 0rem 0;
+    border: 0;
+    border-radius: 0;
+    overflow: hidden;
 }
 
 .hero-ellipse {
@@ -1412,10 +1421,35 @@ footer{
   pointer-events: none;
 }
 
-.sub-service-hero .container {
-  position: relative;
-  z-index: 1;
+.card.other-hero-card{
+    border: none;
+    border-radius: 0;
+    background: transparent;
+    max-width: 44rem;
 }
+
+.card.other-hero-card-img{
+    max-height: 25rem;
+    height: 25rem;
+    overflow: hidden;
+    border: none;
+    position: relative;
+    background: transparent;
+    width: 100%;
+}
+
+.inner-bg-div{
+background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+     height: 100%;
+    width: 100%;
+     display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
 
 .sub-service-hero-title{
     color: #FFF;
