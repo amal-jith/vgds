@@ -24,7 +24,7 @@
                   <a class="nav-link" aria-current="page" href="#">Our Work</a>
                 </li>
                 <li class="nav-item dropdown custom-dropdown">
-                  <a class="nav-link dropdown-toggle" href="/services" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
+                  <a class="nav-link dropdown-toggle" href="{% url 'projectapp:services' %}" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
                   <div class="dropdown-menu mega-dropdown-bg">
                         <div class="row">
                           <div class="col-md-4">
@@ -49,7 +49,7 @@
                     </div>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="/solutions">Solutions</a>
+                  <a class="nav-link" href="#">Solutions</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#">Testimonials</a>
@@ -64,14 +64,14 @@
 
                 <!-- Mobile Order Now button -->
               <div class="d-lg-none mt-3">
-                <button type="button" class="btn order-button-nav">Order Now</button>
+                <a href="/orderNow" type="button" class="btn order-button-nav">Order Now</a>
               </div>
 
             </div>
 
             <!-- Order Now Button -->
             <div class="d-none d-lg-block">
-              <button type="button" class="btn order-button-nav">Order Now</button>
+              <a href="/orderNow" type="button" class="btn order-button-nav">Order Now</a>
             </div>
 
           </div>
@@ -79,22 +79,35 @@
 
         <!--END NAVBAR-->
 
-      <div class="white-section">
+        <div class="white-section">
 
-          <div class="card sub-service-hero">
-            <img src="static/images/Ellipse79244.svg" alt="Ellipse Background" class="hero-ellipse">
+          <div class="card sub-service-hero" style="background-image: url('static/images/cover-other.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
             <div class="container p-0">
-              <h1 class="sub-service-hero-title">Presentation Design</h1>
-              <h1 class="sub-service-hero-subtitle">Persuasive Slides. Powerful Impact.</h1>
-              <p class="sub-service-hero-desc">
-                Transform your ideas into powerful presentations that captivate and persuade.
-                Our designs are tailored to your brand identity, ensuring a polished, cohesive, and memorable impact.
-              </p>
+              <div class="row row-cols-1 row-cols-md-2 g-4">
+                <div class="col-md-7 d-flex align-items-center">
+                  <div class="card other-hero-card">
+                    <div class="card-body p-0">
+                      <h1 class="sub-service-hero-title">Presentation Design</h1>
+                      <h1 class="sub-service-hero-subtitle">Persuasive Slides. Powerful Impact.</h1>
+                      <p class="sub-service-hero-desc">
+                        Transform your ideas into powerful presentations that captivate and persuade.
+                        Our designs are tailored to your brand identity, ensuring a polished, cohesive, and memorable impact.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-5 d-flex align-items-center justify-content-center">
+                  <div class="card other-hero-card-img">
+                    <div class="inner-bg-div" style="background-image: url('static/images/51435002.png');"></div>
+                  </div>
+                </div>
+              </div>
+
             </div>
           </div>
 
 
-          <div class="card service-section">
+          <div class="card service-card-white">
             <div class="container p-0">
 
               <div class="row row-cols-1 row-cols-md-2 g-4">
@@ -207,7 +220,7 @@
             </div>
           </div>
 
-          <div class="card service-card-white">
+          <div class="card service-section">
             <div class="container p-0">
               <div class="card-body p-0">
                 <div class="row row-cols-1 row-cols-md-2 g-4">
@@ -228,7 +241,7 @@
             </div>
           </div>
 
-          <div class="card service-section">
+          <div class="card service-card-white">
             <div class="container p-0">
               <div class="card-body">
                 <div class="row row-cols-1 row-cols-md-2 g-4">
@@ -274,7 +287,7 @@
             </div>
           </div>
 
-           <div class="card service-card-white">
+           <div class="card service-section">
             <div class="container p-0">
               <div class="card-body p-0">
                 <div class="row row-cols-1 row-cols-md-2 g-4">
@@ -332,8 +345,9 @@
 
         </div>
 
-       <div class="white-section" id="faq-section">
-            <div class="card faq-card-other">
+
+               <div class="white-section" id="faq-section">
+            <div class="card faq-card">
                 <div class="container p-0">
                     <div class="card-body p-0 card-body-1">
                         <div class="row g-2">
